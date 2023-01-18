@@ -77,7 +77,8 @@ body {
     margin: 0 auto;
 
     /* Временная заливка */
-    background-color: rgba(211, 200, 200, 0.849);
+    /* background-color: rgba(211, 200, 200, 0.849); */
+    background-color: var(--basic-white);
 }
 
 /* ----- Прячет заголовки ----- */
@@ -92,7 +93,8 @@ body {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
+/* ---------------------------- */
   
 .wrapper {
     display: flex;
@@ -128,20 +130,31 @@ body {
     padding: 0;
 }
 .button {
+    font-family: "Raleway";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.16;
     padding: 33px 55px;
     border: 2px solid var(--basic-oliva);
+    background-color: var(--basic-white);
 }
 
 /* ---------------- HEADER ---------------- */
 .main-header {
 }
-.main-heder__container {
+.main-header__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: 167px;
 }
+.main-header__container > div:not(:last-child) {
+    margin-right: 10px;
+}
 .main-header__logo {
+}
+.main-header__menu {
 }
 .main-header__navigation {
 }
@@ -150,6 +163,7 @@ body {
 .main-navigation__list {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .main-navigation__item {
     font-family: "OpenSans";
@@ -211,11 +225,11 @@ body {
     z-index: 2;
 }
 .promo__offer-content {
-    max-width: 535px;
+    max-width: 590px;
     padding: 60px 0px 0px 55px;
     background-color: var(--basic-white);
 }
-.promo__main-title {
+.promo__title {
     font-family: "Raleway";
     font-style: normal;
     font-weight: 400;
@@ -233,7 +247,7 @@ body {
     font-size: 23px;
     line-height: 1.65;
     padding: 0;
-    /* margin: 0px 0px 60px; */
+    margin: 0px 0px 60px;
     max-width: 485px;
 }
 .promo__action {
@@ -251,6 +265,10 @@ body {
 .promo__slider-item {
     max-width: 630px;
     max-height: 876px;
+}
+.promo__slider-item img {
+    max-width: 100%;
+    max-height: 100%;
 }
 .promo__slider-controls {
     position: absolute;
@@ -287,6 +305,7 @@ body {
 .promo__socials-link {
 }
 .advantages {
+    margin: 0px 0px 160px;
 }
 .advantaged__container {
 }
@@ -295,25 +314,115 @@ body {
 .title {
 }
 .advantages__content {
+
+}
+.advantages__content-description {
+    max-width: 66.666%;
 }
 .advantages__description {
 }
 .advantages__list {
-    display: flex;
-}
-.list {
+    /* max-width: 100%; */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* display: flex;
+    flex: 0 1 33.333%; */
 }
 .advantages__item {
 }
+.advantages__item:not(:last-child) {
+    margin: 0px 10px 0px 0px;
+}
 .advantages__title-container {
     display: flex;
+    min-height: 70px;
 }
 .advantages__title-container img {
     order: -1;
+    margin: 0px 25px 0px 0px;
 }
 .advantages__subtitle {
 }
 .subtitle {
 }
 .advanteges__description {
+}
+
+@media (max-width:1800px) {
+    .promo__offer {
+        padding: 0px 100px 0px 0px;
+    }
+}
+
+@media (max-width:1700px) {
+    .promo__offer {
+        padding: 0px 50px 0px 0px;
+    }
+}
+
+@media (max-width:1655px) {
+    /* .promo__offer {
+        padding: 0px 50px 0px 0px;
+    } */
+    .promo__socials-list {
+        margin: 0px 50px 0px 0px;
+    }
+}
+
+@media (max-width:768px) {
+    .wrapper {
+        padding: 0px 50px;
+    }
+    /* ----- Прячем заголовки ----- */
+    .main-header__contacts {
+        display: none;
+    }
+    /* ----- Меню Бургер ----- */
+    .main-header__container {
+        /* min-width: 100%; */
+    }
+    .main-header__menu {
+        position: relative;
+        /* min-width: 100%; */
+    }
+    .main-header__menu-burger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 20px;
+    }
+    .main-header__menu-burger span {
+        position: absolute;
+        top: 9px;
+        right: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--basic-oliva);
+    }
+    .main-header__menu-burger::before,
+    .main-header__menu-burger::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--basic-oliva);
+    }
+    .main-header__menu-burger::before {
+        top: 0;
+    }
+    .main-header__menu-burger::after {
+        bottom: 0;
+    }
+    /* ---------------------------- */
+    .main-header__navigation {
+        position: absolute;
+        top: 40px;
+        left: 0;
+    }
+    .main-navigation__list {
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
