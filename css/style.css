@@ -117,7 +117,7 @@ body {
     font-weight: 400;
     font-size: 45px;
     line-height: 1.18;
-    margin: 0;
+    margin: 0px 0px 30px;
     padding: 0;
 }
 .subtitle {
@@ -216,13 +216,13 @@ body {
     position: absolute;
     top: 86px;
     right: 0;
-    /* right: -445px; */
     max-height: 630px;
     max-width: 595px;
     display: flex;
     flex-direction: column;
     padding: 0px 200px 0px 0px;
     z-index: 2;
+    order: 2;
 }
 .promo__offer-content {
     max-width: 590px;
@@ -259,6 +259,9 @@ body {
     color: var(--basic-black);
     text-decoration: none;
 }
+.promo__slider-socials-container {
+    display: flex;
+}
 .promo__slider {
     position: relative;
 }
@@ -275,6 +278,7 @@ body {
     bottom: -50px;
     right: -40px;
     display: flex;
+    z-index: 3;
 }
 .promo__slider-conrol {
     width: 102px;
@@ -318,15 +322,18 @@ body {
 }
 .advantages__content-description {
     max-width: 66.666%;
+    margin: 0px 0px 65px;
 }
-.advantages__description {
+.advantages__description--main,
+.advantages__description--sub {
+    margin: 0;
+}
+.advantages__description--main:not(:last-child) {
+    margin: 0px 0px 15px;
 }
 .advantages__list {
-    /* max-width: 100%; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* display: flex;
-    flex: 0 1 33.333%; */
 }
 .advantages__item {
 }
@@ -336,6 +343,7 @@ body {
 .advantages__title-container {
     display: flex;
     min-height: 70px;
+    margin: 0px 0px 20px;
 }
 .advantages__title-container img {
     order: -1;
@@ -345,8 +353,10 @@ body {
 }
 .subtitle {
 }
-.advanteges__description {
+.advantages__description--sub {
+    margin: 0px 0px 30px;
 }
+
 
 @media (max-width:1800px) {
     .promo__offer {
@@ -361,11 +371,50 @@ body {
 }
 
 @media (max-width:1655px) {
-    /* .promo__offer {
-        padding: 0px 50px 0px 0px;
-    } */
     .promo__socials-list {
         margin: 0px 50px 0px 0px;
+    }
+}
+
+@media (max-width:1600px) {
+    .promo__container {
+        flex-direction: column;
+    }
+    .promo__slider-socials-container {
+        margin: 0px 0px 160px;
+    }
+    .promo__offer {
+        position: relative;
+        top: 0;
+        right: 0;
+        max-height: auto;
+        max-width: 100%;
+        padding: 0;
+    }
+    .promo__offer-content {
+        max-width: 100%;
+        padding: 0;
+    }
+    .promo__title {
+        padding: 0;
+        margin: 0px 0px 20px ;
+    }
+    .main-title {
+    }
+    .promo__description {
+        padding: 0;
+        margin: 0px 0px 60px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width:1400px) {
+    .advantages__content-description {
+        max-width: 100%;
+    }
+    .advantages__list {
+        display: flex;
+        flex-direction: column;
     }
 }
 
