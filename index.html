@@ -5,48 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furni Minimal</title>
-    <link rel="stylesheet" href="css/normalize.css">    
-    <link rel="stylesheet" href="css/style.css">    
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
     <div class="wrapper">
 
         <header class="main-header">
             <div class="main-header__container">
+              <div class="main-header__body">
                 <div class="main-header__logo">
                     <img src="img/logo.svg" alt="Логотип Furni Mimnal" width="125px" height="45px">
                 </div>
-                <div class="main-header__menu">
-                    <div class="main-header__menu-burger">
-                        <span></span>
-                    </div>
-                    <nav class="main-header__navigation main-navigation">
-                        <ul class="main-navigation__list list">
-                            <li class="main-navigation__item">
-                                <a href="#" class="main-navigation__link">О&nbsp;компании</a>
-                            </li>
-                            <li class="main-navigation__item">
-                                <a href="#" class="main-navigation__link">Каталог</a>
-                            </li>
-                            <li class="main-navigation__item">
-                                <a href="#" class="main-navigation__link">Отзывы</a>
-                            </li>
-                            <li class="main-navigation__item">
-                                <a href="#" class="main-navigation__link">Часто задаваемые вопросы</a>
-                            </li>
-                            <li class="main-navigation__item">
-                                <a href="#" class="main-navigation__link">Контакты</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="main-header__menu-burger active">
+                    <span></span>
                 </div>
+                <nav class="main-header__navigation main-navigation active">
+                    <ul class="main-navigation__list list">
+                        <li class="main-navigation__item">
+                            <a href="#" class="main-navigation__link">О&nbsp;компании</a>
+                        </li>
+                        <li class="main-navigation__item">
+                            <a href="#" class="main-navigation__link">Каталог</a>
+                        </li>
+                        <li class="main-navigation__item">
+                            <a href="#" class="main-navigation__link">Отзывы</a>
+                        </li>
+                        <li class="main-navigation__item">
+                            <a href="#" class="main-navigation__link">Часто задаваемые вопросы</a>
+                        </li>
+                        <li class="main-navigation__item">
+                            <a href="#" class="main-navigation__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
                 <div class="main-header__contacts">
                     <a href="tel:+78002060107" class="main-header__phone-link">8 (800) 206 01 07</a>
                     <a href="#" class="main-header__feedback-link">Обратный&nbsp;звонок</a>
                 </div>
+              </div>
             </div>
         </header>
-        
+
         <section class="promo">
             <div class="promo__container">
                 <h1 class="promo__main-title visually-hidden">Главная страница</h1>
@@ -56,7 +56,8 @@
                         <p class="promo__description">Исключительно из экологически чистых материалов для офиса и дома. Доставляем на следующий день</p>
                     </div>
                     <div class="promo__action">
-                        <a href="" class="promo__button-link button uppercase">Заказать мебель</a>
+                        <a href="" class="promo__button-link promo__button-link--desctop button uppercase">Заказать мебель</a>
+                        <a href="" class="promo__button-link promo__button-link--mobile button uppercase">Заказать</a>
                     </div>
                 </div>
                 <div class="promo__slider-socials-container">
@@ -77,7 +78,7 @@
                             </button>
                         </div>
                     </div>
-    
+
                     <div class="promo__socials">
                         <ul class="promo__socials-list list">
                             <li class="promo__socials-item">
@@ -142,8 +143,8 @@
             </div>
         </section>
 
-    </div>    
+    </div>
 
-
+    <script src="js/scrtipt.js"></script>
 </body>
 </html>
