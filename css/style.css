@@ -444,38 +444,16 @@ body {
 }
 
 @media (max-width:1260px) {
-
-
-}
-
-@media (max-width:1200px) {
-  .wrapper {
-    padding: 0px 200px;
-  }
-}
-
-@media (max-width:900px) {
-  .promo__title {
-    font-size: 46px;
-  }
-}
-
-@media (max-width:768px) {
-  .wrapper {
-    padding: 0px 50px;
-  }
-  /* ----- Прячем заголовки ----- */
-  body.lock {
-    overflow: hidden;
-  }
-
-  .main-header__contacts {
-    display: none;
-  }
-
   .main-header__contacts {
     order: 2;
   }
+  .main-header__body {
+    justify-content: left;
+  }
+  .main-header__body > div:not(:last-child) {
+    margin-right: 20px;
+  }
+
     /* ----- Меню Бургер ----- */
   .main-header__menu-burger {
     display: block;
@@ -486,6 +464,7 @@ body {
     width: 30px;
     height: 20px;
     order: 3;
+    cursor: pointer;
   }
   .main-header__menu-burger span {
     position: absolute;
@@ -535,6 +514,8 @@ body {
     padding: 10px;
     overflow: auto;
     transition: all 0.3s ease 0s;
+    margin: 0;
+    box-sizing: border-box;
   }
   .main-header__navigation.active {
     position: absolute;
@@ -547,6 +528,38 @@ body {
   }
   .main-navigation__item {
     font-size: 20px;
+    padding: 0;
+  }
+  .main-navigation__link {
+    display: block;
+  }
+}
+
+@media (max-width:1200px) {
+  .wrapper {
+    padding: 0px 200px;
+  }
+}
+
+@media (max-width:900px) {
+  .promo__title {
+    font-size: 46px;
+  }
+}
+
+@media (max-width:830px) {
+  /* ----- Прячем заголовки ----- */
+  .main-header__contacts {
+    display: none;
+  }
+}
+
+@media (max-width:768px) {
+  body.lock {
+    overflow: hidden;
+  }
+  .wrapper {
+    padding: 0px 50px;
   }
 }
 
