@@ -33,3 +33,13 @@ document.addEventListener( 'click', (e) => {
     body.classList.remove('lock'); // Снимаем запрет на прокрутку всего сайта при открытом меню-бургере
   }
 });
+
+// Закрываем меню-бургер при нажатии клавиши Escape
+document.addEventListener('keydown', function(e) {
+	if( e.keyCode == 27 ){ // код клавиши Escape, но можно использовать e.key
+    console.log('Нажатие клавиши Escape');
+    burger.classList.remove('active');
+    burgerNav.classList.remove('active');
+    body.classList.remove('lock'); // Снимаем запрет на прокрутку всего сайта при открытом меню-бургере
+	}
+});
