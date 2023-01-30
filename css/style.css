@@ -77,8 +77,6 @@ body {
     max-width: 1920px;
     margin: 0 auto;
 
-    /* Временная заливка */
-    /* background-color: rgba(211, 200, 200, 0.849); */
     background-color: var(--basic-white);
 }
 
@@ -97,12 +95,11 @@ body {
 }
 /* ---------------------------- */
 
-.wrapper {
+.page-body__main {
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    padding: 0px 294px;
-    margin: 0px auto;
+    overflow-x: hidden;
 }
 .list {
     list-style: none;
@@ -140,11 +137,16 @@ body {
     border: 2px solid var(--basic-oliva);
     background-color: var(--basic-white);
 }
+.wrapper {
+  max-width: 1360px;
+  padding: 0px 15px;
+  margin: 0px auto;
+}
 
 /* ---------------- HEADER ---------------- */
 .main-header {
   width: 100%;
-  z-index: 50;
+  z-index: 100;
 }
 .main-header::before {
   content: "";
@@ -154,7 +156,7 @@ body {
   width: 100%;
   height: 167px;
   background-color: var(--basic-white);
-  z-index: 2;
+  z-index: 100;
 }
 .main-header__container {
 }
@@ -165,18 +167,16 @@ body {
   height: 167px;
   background-color: var(--basic-white);
   position: relative;
-}
-.main-header__body > div:not(:last-child) {
-    margin-right: 10px;
+  column-gap: 10px;
 }
 .main-header__logo {
-  z-index: 3;
+  z-index: 101;
 }
 .main-header__menu-burger {
   display: none;
 }
 .main-header__navigation {
-  z-index: 3;
+  z-index: 101;
   margin: 0px 10px 0px 0px;
 }
 .main-navigation__list {
@@ -201,7 +201,7 @@ body {
 .main-header__contacts {
     display: flex;
     flex-direction: column;
-    z-index: 3;
+    z-index: 101;
 }
 .main-header__phone-link {
     font-family: "Raleway";
@@ -258,6 +258,9 @@ body {
     padding: 0;
     margin: 0px 0px 20px ;
 }
+.promo__title--mobile {
+  display: none;
+}
 .main-title {
 }
 .promo__description {
@@ -301,7 +304,6 @@ body {
     position: absolute;
     bottom: -50px;
     right: 0px;
-    /* right: -40px; */
     display: flex;
     z-index: 3;
 }
@@ -382,54 +384,9 @@ body {
     margin: 0px 0px 30px;
 }
 
-
-@media (max-width:1800px) {
-    .promo__offer {
-        padding: 0px 100px 0px 0px;
-    }
-}
-
-@media (max-width:1700px) {
-    .promo__offer {
-        padding: 0px 50px 0px 0px;
-    }
-}
-
 @media (max-width:1655px) {
     .promo__socials-list {
         margin: 0px 50px 0px 0px;
-    }
-}
-
-@media (max-width:1600px) {
-    .promo__container {
-        flex-direction: column;
-    }
-    .promo__slider-socials-container {
-        margin: 0px 0px 160px;
-    }
-    .promo__offer {
-        position: relative;
-        top: 0;
-        right: 0;
-        max-height: auto;
-        max-width: 100%;
-        padding: 0;
-    }
-    .promo__offer-content {
-        max-width: 100%;
-        padding: 0;
-    }
-    .promo__title {
-        padding: 0;
-        margin: 0px 0px 20px;
-    }
-    .main-title {
-    }
-    .promo__description {
-        padding: 0;
-        margin: 0px 0px 60px;
-        max-width: 100%;
     }
 }
 
@@ -443,28 +400,67 @@ body {
     }
 }
 
-@media (max-width:1260px) {
+@media (max-width:1200px) {
+  .promo__container {
+      flex-direction: column;
+      margin: 0px 0px 160px;
+    }
+    .promo__title--desktop {
+      display: none;
+    }
+    .promo__title--mobile {
+      display: block;
+    }
+    .promo__slider-socials-container {
+      margin: 0px auto;
+      margin: 0px 0px 40px;
+  }
+  .promo__offer {
+      position: relative;
+      top: 0;
+      right: 0;
+      max-height: auto;
+      max-width: 100%;
+      padding: 0;
+  }
+  .promo__offer-content {
+      max-width: 100%;
+      padding: 0;
+  }
+  .promo__title {
+      padding: 0;
+      margin: 0px 0px 20px;
+  }
+  .main-title {
+  }
+  .promo__description {
+      padding: 0;
+      margin: 0px 0px 60px;
+      max-width: 100%;
+  }
+}
+
+@media (max-width:1060px) {
+  body.lock {
+    overflow: hidden;
+  }
   .main-header__contacts {
     order: 2;
   }
   .main-header__body {
-    justify-content: left;
-  }
-  .main-header__body > div:not(:last-child) {
-    margin-right: 20px;
+    column-gap: 20px;
   }
 
     /* ----- Меню Бургер ----- */
   .main-header__menu-burger {
     display: block;
-    z-index: 3;
-    position: absolute;
-    top: 70px;
-    right: 15px;
+    z-index: 101;
+    position: relative;
     width: 30px;
     height: 20px;
     order: 3;
     cursor: pointer;
+    margin: 0;
   }
   .main-header__menu-burger span {
     position: absolute;
@@ -518,10 +514,13 @@ body {
     box-sizing: border-box;
   }
   .main-header__navigation.active {
-    position: absolute;
-    top: 167px;
+    position: fixed;
+    top: 0px;
     left: 0px;
-    z-index: 2;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    padding: 182px 15px 15px;
   }
   .main-navigation__list {
     flex-direction: column;
@@ -532,12 +531,6 @@ body {
   }
   .main-navigation__link {
     display: block;
-  }
-}
-
-@media (max-width:1200px) {
-  .wrapper {
-    padding: 0px 200px;
   }
 }
 
@@ -555,11 +548,8 @@ body {
 }
 
 @media (max-width:768px) {
-  body.lock {
-    overflow: hidden;
-  }
-  .wrapper {
-    padding: 0px 50px;
+  .main-navigation__item {
+    margin: 0px 0px 10px;
   }
 }
 
@@ -580,7 +570,7 @@ body {
     font-size: 17px;
   }
   .main-header__navigation.active {
-    top: 80px;
+    padding: 95px 15px 15px;
   }
   .promo__slider-socials-container {
     display: none;
@@ -599,8 +589,6 @@ body {
     display: block;
   }
   .main-header__menu-burger {
-    top: 32px;
-    right: 0px;
     margin: 0;
   }
   .promo__title {
