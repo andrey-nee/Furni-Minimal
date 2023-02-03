@@ -138,9 +138,10 @@ body {
     background-color: var(--basic-white);
 }
 .wrapper {
-  max-width: 1360px;
+  max-width: 1354px;
   padding: 0px 15px;
   margin: 0px auto;
+  box-sizing: border-box;
 }
 
 /* ---------------- HEADER ---------------- */
@@ -424,8 +425,17 @@ body {
 .examples__catalog {
   margin: 0px 0px 48px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  /* gap: 20px; */
+  grid-template-columns: repeat(3, 428px);
+  gap: 20px;
+  overflow-x: auto;
+}
+.example__slide--single {
+
+}
+.example__slide--multi {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 20px;
 }
 .examples__catalog-item {
   position: relative;
