@@ -424,6 +424,9 @@ body {
   display: block;
 }
 .examples__catalog {
+
+}
+.examples__catalog-wrapper {
   margin: 0px 0px 48px;
   display: flex;
   overflow: hidden;
@@ -539,6 +542,9 @@ body {
 .examples__control svg {
   display: block;
 }
+
+/* ---------------- SWIPER ---------------- */
+
 
 /* ---------------- HOW TO ---------------- */
 .how-to {
