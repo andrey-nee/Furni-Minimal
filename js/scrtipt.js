@@ -44,20 +44,35 @@ document.addEventListener('keydown', function(e) {
 	}
 });
 
-const swiper = new Swiper('.swiper', {
+// Используем SwiperJS
+const swiper = new Swiper('.examples__catalog', {
   // Optional parameters
-  direction: 'vertical',
+  slidesPerView: 1,
+  spaceBetween: 20,
   loop: true,
-
+  breakpoints: {
+    "@0.00": {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+    "@0.75": {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    "@1.00": {
+      slidesPerView: 3,
+      spaceBetween: 40,
+    },
+  },
   // If we need pagination
   pagination: {
-    el: '.swiper-pagination',
+    el: '.examples__container .swiper-pagination',
+    clickable: true,
   },
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.controls__control--next',
+    prevEl: '.controls__control--prew',
   },
-
 });
