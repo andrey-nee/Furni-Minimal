@@ -44,8 +44,8 @@ document.addEventListener('keydown', function(e) {
 	}
 });
 
-// Используем SwiperJS
-const swiper = new Swiper('.examples__catalog', {
+// Используем SwiperJS для Промо
+const catalogSwiper = new Swiper('.examples__catalog', {
   // Optional parameters
   slidesPerView: 1,
   spaceBetween: 20,
@@ -69,10 +69,21 @@ const swiper = new Swiper('.examples__catalog', {
     el: '.examples__container .swiper-pagination',
     clickable: true,
   },
-
   // Navigation arrows
   navigation: {
     nextEl: '.controls__control--next',
     prevEl: '.controls__control--prew',
+  },
+});
+
+// Используем SwiperJS для Каталога
+const promoSwiper = new Swiper('.promo__slider', {
+  // Optional parameters
+  // slidesPerView: 1,
+  loop: true,
+  // Navigation arrows
+  navigation: {
+    nextEl: '.promo__slider-conrol--next',
+    prevEl: '.promo__slider-conrol--prew',
   },
 });

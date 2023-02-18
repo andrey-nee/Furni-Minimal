@@ -136,6 +136,10 @@ body {
     padding: 33px 55px;
     border: 2px solid var(--basic-oliva);
     background-color: var(--basic-white);
+    transition: all 0.3s;
+}
+.button:hover {
+    background-color: var(--basic-oliva);
 }
 .wrapper {
   max-width: 1354px;
@@ -198,6 +202,10 @@ body {
 .main-navigation__link {
   color: var(--basic-black);
   text-decoration: none;
+  transition: all 0.3s;
+}
+.main-navigation__link:hover {
+  color: var(--basic-oliva);
 }
 .main-header__contacts {
   display: flex;
@@ -214,6 +222,10 @@ body {
   text-decoration: none;
   margin-bottom: 4px;
   white-space: nowrap;
+  transition: all 0.3s;
+}
+.main-header__phone-link:hover {
+  color: var(--basic-oliva);
 }
 .main-header__feedback-link {
   font-family: "OpenSans", Arial, sans-serif;
@@ -223,6 +235,10 @@ body {
   line-height: 22px;
   color: var(--basic-oliva);
   text-decoration: none;
+  /* transition: all 0.3s; */
+}
+.main-header__feedback-link:hover {
+  text-decoration: underline;
 }
 
 /* ---------------- PROMO ---------------- */
@@ -288,9 +304,18 @@ body {
 }
 .promo__slider-socials-container {
   display: flex;
+  /* position: relative; */
+  width: 100%;
+}
+.promo__slider-container {
+  /* display: flex; */
+  position: relative;
+  width: 100%;
+  /* max-width: 577px; */
 }
 .promo__slider {
-  position: relative;
+}
+.promo__slider-wrapper {
 }
 .promo__slider-item {
   max-width: 630px;
@@ -300,6 +325,7 @@ body {
 .promo__slider-item img {
   max-width: 100%;
   max-height: 100%;
+  display: block;
 }
 .promo__slider-controls {
   position: absolute;
@@ -311,14 +337,19 @@ body {
 .promo__slider-conrol {
   width: 102px;
   height: 102px;
+  display: flex;
   background-color: var(--basic-white);
   justify-content: center;
   align-items: center;
   border: none;
+  cursor: pointer;
 }
-.promo__slider-conrol--left {
+.promo__slider-conrol svg {
+  display: block;
 }
-.promo__slider-conrol--right {
+.promo__slider-conrol--prew {
+}
+.promo__slider-conrol--next {
 }
 .promo__socials {
   order: -1;
@@ -361,6 +392,7 @@ body {
   grid-template-columns: 1fr 1fr 1fr;
 }
 .advantages__item {
+  width: 385px;
 }
 .advantages__item:not(:last-child) {
   margin: 0px 10px 0px 0px;
@@ -371,10 +403,12 @@ body {
   margin: 0px 0px 20px;
 }
 .advantages__title-container img {
-  order: -1;
+  order: 1;
   margin: 0px 25px 0px 0px;
 }
 .advantages__subtitle {
+  width: 55%;
+  order: 2;
 }
 .subtitle {
 }
@@ -420,6 +454,9 @@ body {
   color: var(--basic-oliva);
   text-decoration: none;
   display: block;
+}
+.examples__socials-link:hover {
+  text-decoration: underline;
 }
 .examples__catalog {
   width: 100%;
@@ -496,6 +533,7 @@ body {
   align-items: center;
   column-gap: 10px;
   align-self: flex-end;
+  cursor: pointer;
 }
 .examples__control {
   border: none;
@@ -514,6 +552,11 @@ body {
   height: 10px;
   background-color: var(--basic-gray);
   opacity: 0.15;
+  transition: all 0.3s;
+}
+.examples__controls .swiper-pagination-bullet:hover {
+  background-color: var(--basic-oliva);
+  opacity: 0.5;
 }
 .examples__controls .swiper-pagination-bullet-active {
   background-color: var(--basic-oliva);
@@ -580,6 +623,9 @@ body {
   text-decoration: none;
   white-space: nowrap;
 }
+.how-to__description-number:hover {
+  text-decoration: underline;
+}
 .how-to__form {
   display: flex;
   column-gap: 40px;
@@ -615,8 +661,12 @@ body {
 }
 .agreement {
 }
-.agreement span {
+.how-to__form-link {
   color: var(--basic-oliva);
+  text-decoration: none;
+}
+.how-to__form-link:hover {
+  text-decoration: underline;
 }
 
 /* ---------------- АДАПТИВ ---------------- */
@@ -628,11 +678,18 @@ body {
 
 @media (max-width:1400px) {
   .advantages__content-description {
-      max-width: 100%;
+      /* max-width: 100%; */
   }
   .advantages__list {
       display: flex;
-      flex-direction: column;
+      /* flex-direction: column; */
+  }
+  .advantages__title-container {
+    flex-wrap: wrap;
+  }
+  .advantages__subtitle {
+    width: 100%;
+    margin-top: 20px;
   }
   .advantages__description--sub {
     margin: 0px 0px 30px;
@@ -654,8 +711,8 @@ body {
     display: block;
   }
   .promo__slider-socials-container {
-    margin: 0px auto;
-    margin: 0px 0px 40px;
+    margin: 0px auto 40px;
+    /* max-width: 577px; */
   }
   .promo__offer {
     position: relative;
@@ -799,14 +856,21 @@ body {
   .how-to__form-phone {
     margin: 0px 0px 25px;
   }
-  .how-to__submite-button {
-
-  }
 }
 
 @media (max-width:900px) {
   .promo__title {
     font-size: 46px;
+  }
+  .advantages__list {
+    /* display: flex; */
+    flex-direction: column;
+  }
+  .advantages__item {
+    width: 100%;
+  }
+  .advantages__subtitle {
+    padding-right: 50%;
   }
 }
 
@@ -883,7 +947,7 @@ body {
   .main-header__menu-burger {
     margin: 0;
   }
-  .promo__title {
+  h2.promo__title {
     font-size: 30px;
     margin: 0px 0px 12px;
   }
@@ -902,11 +966,11 @@ body {
   .promo__button-link--mobile {
     display: block;
   }
-  .promo__button-link--desctop {
+  .promo__button-link--desktop {
     display: none;
   }
   .promo__container,
-  .advantaged__container,
+  .advantages__container,
   .examples__container,
   .how-to__container {
     margin: 0px auto 45px;
@@ -915,10 +979,13 @@ body {
     font-size: 25px;
     margin: 0px 0px 12px;
   }
+  .advantages__item {
+  }
   .advantages__description--main:not(:last-child) {
     margin: 0px 0px 12px;
   }
   .advantages__content-description {
+    max-width: 100%;
     margin: 0px 0px 25px;
   }
   .advantages__title-container img {
@@ -936,6 +1003,9 @@ body {
   .examples__title {
     margin: 0;
   }
+  .examples__socials-link {
+    max-width: 105px;
+  }
   .examples__catalog {
     margin: 0px 0px 18px;
   }
@@ -945,6 +1015,11 @@ body {
   }
   .examples__catalog-description {
     font-size: 12px;
+  }
+  .examples__catalog-price {
+    padding: 15px 20px;
+    font-size: 16px;
+    line-height: 1.18;
   }
   .examples__controls {
     column-gap: 8px;
@@ -967,9 +1042,18 @@ body {
   .how-to__description {
     line-height: 1.77;
   }
+  .how-to__form {
+    max-width: 100%;
+  }
   .how-to__form-phone input,
   .how-to__form-name input {
   padding: 19px 0px;
+  }
+  .how-to__form-submit {
+    max-width: 100%;
+  }
+  .how-to__form-agreement {
+    max-width: 60%;
   }
 }
 
