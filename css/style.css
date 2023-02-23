@@ -310,17 +310,17 @@ body {
 .promo__slider-container {
   /* display: flex; */
   position: relative;
-  width: 100%;
-  /* max-width: 577px; */
+  /* width: 100%; */
+  max-width: 577px;
 }
 .promo__slider {
 }
 .promo__slider-wrapper {
 }
 .promo__slider-item {
-  max-width: 630px;
-  max-height: 876px;
-  margin: 0px 55px 0px 0px;
+  /* max-width: 630px; */
+  /* max-height: 876px; */
+  /* margin: 0px 55px 0px 0px; */
 }
 .promo__slider-item img {
   max-width: 100%;

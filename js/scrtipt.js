@@ -79,7 +79,8 @@ const catalogSwiper = new Swiper('.examples__catalog', {
 // Используем SwiperJS для Каталога
 const promoSwiper = new Swiper('.promo__slider', {
   // Optional parameters
-  // slidesPerView: 1,
+  slidesPerView: 1,
+  spaceBetween: 10,
   loop: true,
   // Navigation arrows
   navigation: {
