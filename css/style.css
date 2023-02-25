@@ -669,10 +669,64 @@ body {
   text-decoration: underline;
 }
 
+
+/* ---------------- WHY ---------------- */
+.why {
+}
+.why__container {
+  max-width: 1920px;
+  position: relative;
+  margin: 0px 0px 160px 0px;
+}
+.why__content {
+  margin: 0px 0px 60px 0px;
+  padding: 55px 60px;
+  background-color: var(--basic-white);
+  position: absolute;
+  top: 165px;
+  left: 432px;
+  max-width: 49.74%;
+  box-sizing: border-box;
+}
+.why__content--mobile {
+  display: none;
+}
+.why__title {
+  max-width: 80%;
+}
+.why__description {
+  margin: 0px 0px 20px 0px;
+}
+.why__description:last-child {
+  margin: 0px 0px 0px 0px;
+  max-width: 97.16%;
+}
+.why__description--mobile {
+  margin: 0;
+}
+.why__image-container {
+  margin: 0px 0px 0px -15px;
+}
+.why__image-container img {
+  display: block;
+}
+
+
 /* ---------------- АДАПТИВ ---------------- */
 @media (max-width:1655px) {
   .promo__socials-list {
       margin: 0px 50px 0px 0px;
+  }
+}
+
+@media (max-width:1600px) {
+  .why__title {
+    max-width: 100%;
+  }
+}
+@media (max-width:1500px) {
+  .why__content {
+    top: 165px;
   }
 }
 
@@ -735,6 +789,17 @@ body {
   .promo__description {
     padding: 0;
     margin: 0px 0px 60px;
+    max-width: 100%;
+  }
+  .why__content {
+    padding: 0;
+    background-color: var(--basic-white);
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+  }
+  .why__description:last-child {
     max-width: 100%;
   }
 }
@@ -903,6 +968,14 @@ body {
   .promo__slider-container {
     max-width: 87%;
   }
+  .why__image-container {
+    margin: 0;
+    max-width: 100%;
+  }
+  .why__image-container img {
+    width: 100%;
+    height: auto;
+  }
 }
 
 @media (max-width:559px) {
@@ -1063,6 +1136,24 @@ body {
   }
   .how-to__form-agreement {
     max-width: 60%;
+  }
+  .why__container {
+    margin: 0px 0px 45px 0px;
+  }
+  .why__content {
+    margin: 0px 0px 15px 0px;
+  }
+  .why__content--mobile {
+    display: block;
+  }
+  .why__description {
+    margin: 0px 0px 15px 0px;
+  }
+  .why__description:last-child {
+    display: none;
+  }
+  .why__image-container {
+    margin: 0px 0px 15px 0px;
   }
 }
 
