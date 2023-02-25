@@ -899,12 +899,21 @@ body {
   }
 }
 
+@media (max-width:700px) {
+  .promo__slider-container {
+    max-width: 87%;
+  }
+}
+
 @media (max-width:559px) {
   .promo__title {
     font-size: 36px;
   }
   .promo__socials {
     display: none;
+  }
+  .promo__slider-container {
+  max-width: 100%;
   }
   .examples__socials-link {
     font-size: 12px;
