@@ -51,17 +51,17 @@ const catalogSwiper = new Swiper('.examples__catalog', {
   spaceBetween: 20,
   loop: true,
   breakpoints: {
-    "@0.00": {
+    425: {
       slidesPerView: 1,
       spaceBetween: 10,
     },
-    "@0.75": {
+    600: {
       slidesPerView: 2,
       spaceBetween: 20,
     },
-    "@1.00": {
+    1024: {
       slidesPerView: 3,
-      spaceBetween: 40,
+      spaceBetween: 20,
     },
   },
   // If we need pagination
@@ -88,3 +88,32 @@ const promoSwiper = new Swiper('.promo__slider', {
     prevEl: '.promo__slider-conrol--prew',
   },
 });
+
+// Используем SwiperJS для Отзывов
+const testimonialsSwiper = new Swiper('.testimonials__catalog', {
+  // Optional parameters
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  breakpoints: {
+    768: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    1024: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+  },
+  // If we need pagination
+  pagination: {
+    el: '.testimonials__container .swiper-pagination',
+    clickable: true,
+  },
+  // Navigation arrows
+  navigation: {
+    nextEl: '.testimonials__control--next',
+    prevEl: '.testimonials__control--prew',
+  },
+});
+
