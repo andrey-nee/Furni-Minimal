@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Furni Minimal</title>
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page-body">
   <main class="page-body__main">
@@ -277,6 +277,86 @@
           <p class="why__description--mobile">Мебель из экологически чистых материалов выбирают те, кто <span>ценит</span> единение с природой, экологичный образ жизни и <span>стремится</span> к положительному воздействию на окружающую среду. Сейчас экостиль находится <span>на пике популярности</span>, он всегда будет актуален, потому что отражает природное начало всего живого.</p>
         </div>
       </div>
+    </section>
+
+    <section class="consult">
+      <div class="consult__container wrapper">
+        <h2 class="consult__title title">Воспользуйтесь бесплатной
+          консультацией у дизайнера</h2>
+          <div class="consult__content">
+            <p class="consult__description">Оставьте заявку и наш дизайнер перезвонит вам в течение 15 минут. Он бесплатно проконсультирует вас и поможет вам подобрать мебель под ваш интерьер на личной встрече</p>
+            <form action="#" method="post" class="consult__form">
+              <div class="consult__form-name">
+                <!-- <label for="how-to-input-name"></label> -->
+                <input type="text" name="name" id="consult-input-name" placeholder="Ваше имя" class="uppercase">
+              </div>
+              <div class="consult__form-phone">
+                <!-- <label for="how-to-input-phone"></label> -->
+                <input type="tel" name="phone" id="consult-input-phone" placeholder="Ваш телефон" class="uppercase">
+              </div>
+              <div class="consult__form-submit">
+                <input type="submit" name="submit" value="Хочу консультацию" class="consult__submite-button button uppercase">
+                <p class="consult__form-agreement agreement">Нажимая на кнопку, вы даёте согласие на обработку <a href="#" class="consult__form-link">персональных данных</a></p>
+              </div>
+            </form>
+          </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="testimonials__container wrapper">
+        <h2 class="testimonials__title title">Отзывы наших покупателей</h2>
+        <div class="testimonials__catalog swiper">
+          <div class="swiper-wrapper">
+            <div class="testimonials__slide swiper-slide">
+              <article class="testimonials__item">
+                <div class="testimonials__item-info">
+                  <div class="testimonials__avatar">
+                    <img src="img/testimonials-avatar-01.jpg" alt="" width="60px" height="60px">
+                  </div>
+                  <div class="testimonials__bio">
+                    <h3 class="testimonials__name">Наталья Мухина</h3>
+                    <div class="testimonials__socials testimonials__socials--instagram">
+                      <a href="#" class="testimonials__link">@mukhina</a>
+                    </div>
+                  </div>
+                </div>
+                <p class="testimonials__item-comment">Решила обновить мебель на кухне и обратилась в данную компанию, так как мебель хотела именно из экологичных материалов. Работники магазина помогли подобрать столы и стулья которые идеально вписывались в интерьер кухни.</p>
+                <a href="#" class="testimonials__comment-link">Раскрыть отзыв</a>
+              </article>
+            </div>
+            <div class="testimonials__slide swiper-slide">
+              <article class="testimonials__item">
+                <div class="testimonials__item-info">
+                  <div class="testimonials__avatar">
+                    <img src="img/testimonials-avatar-02.jpg" alt="" width="60px" height="60px">
+                  </div>
+                  <div class="testimonials__bio">
+                    <h3 class="testimonials__name">Ксения Бобрикова</h3>
+                    <div class="testimonials__socials testimonials__socials--vkontakte">
+                      <a href="#" class="testimonials__link">@ksenia_b</a>
+                    </div>
+                  </div>
+                </div>
+                <p class="testimonials__item-comment">Вся мебель приехала в обозначенное время, без единой царапины. Отдельного внимания заслуживают стулья и столы, которые нам подобрали дизайнеры под наш интерьер. Они выглядят великолепно. Спасибо компании за качественную мебель!</p>
+              </article>
+            </div>
+          </div>
+        </div>
+        <div class="testimonials__controls">
+          <div class="testimonials__control testimonials__control--prew">
+            <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M0.292892 7.29289C-0.0976295 7.68342 -0.0976295 8.31658 0.292892 8.70711L6.65685 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41422 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928932C7.68054 0.538408 7.04738 0.538408 6.65685 0.928932L0.292892 7.29289ZM46 7L1 7V9L46 9V7Z" fill="#D3BE73"/>
+          </svg>
+          </div>
+          <div class="swiper-pagination"></div>
+          <div class="testimonials__control testimonials__control--next">
+            <svg width="46" height="16" viewBox="0 0 46 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M45.7071 7.29289C46.0976 7.68342 46.0976 8.31658 45.7071 8.70711L39.3431 15.0711C38.9526 15.4616 38.3195 15.4616 37.9289 15.0711C37.5384 14.6805 37.5384 14.0474 37.9289 13.6569L43.5858 8L37.9289 2.34315C37.5384 1.95262 37.5384 1.31946 37.9289 0.928932C38.3195 0.538408 38.9526 0.538408 39.3431 0.928932L45.7071 7.29289ZM0 7L45 7V9L0 9L0 7Z" fill="#D3BE73"/>
+          </svg>
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     </section>
 
   </main>
