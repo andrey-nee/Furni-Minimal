@@ -540,29 +540,34 @@ body {
   background-color: var(--basic-white);
   padding: 0;
 }
-.controls__control--prew {
+.controls__control--prew,
+.testimonials__control--prew {
   margin: 0px 5px 0px 0px;
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
   position: relative;
-  bottom: 0 !important;
+  bottom: 2px;
 }
-.examples__controls .swiper-pagination-bullet {
+.examples__controls .swiper-pagination-bullet,
+.testimonials__controls .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background-color: var(--basic-gray);
   opacity: 0.15;
   transition: all 0.3s;
 }
-.examples__controls .swiper-pagination-bullet:hover {
+.examples__controls .swiper-pagination-bullet:hover,
+.testimonials__controls .swiper-pagination-bullet:hover {
   background-color: var(--basic-oliva);
   opacity: 0.5;
 }
-.examples__controls .swiper-pagination-bullet-active {
+.examples__controls .swiper-pagination-bullet-active,
+.testimonials__controls .swiper-pagination-bullet-active {
   background-color: var(--basic-oliva);
   opacity: 1;
 }
-.controls__control--next {
+.controls__control--next,
+.testimonials__control--next {
   margin: 0px 0px 0px 5px;
 }
 .examples__control svg {
@@ -626,7 +631,8 @@ body {
 .how-to__description-number:hover {
   text-decoration: underline;
 }
-.how-to__form {
+.how-to__form,
+.consult__form {
   display: flex;
   column-gap: 40px;
   max-width: 944px;
@@ -635,7 +641,9 @@ body {
 .how-to__form-name {
 }
 .how-to__form-phone input,
-.how-to__form-name input {
+.how-to__form-name input,
+.consult__form-phone input,
+.consult__form-name input {
   padding: 36px 0px;
   border: none;
   border-bottom: 2px solid var(--basic-oliva);
@@ -644,13 +652,16 @@ body {
 }
 .how-to__form-phone {
 }
-.how-to__form-submit {
+.how-to__form-submit,
+.consult__form-submit {
   max-width: 344px;
 }
-.how-to__submite-button {
+.how-to__submite-button,
+.consult__submite-button {
   margin: 0px 0px 15px;
 }
-.how-to__form-agreement {
+.how-to__form-agreement,
+.consult__form-agreement {
   font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
@@ -661,11 +672,13 @@ body {
 }
 .agreement {
 }
-.how-to__form-link {
+.how-to__form-link,
+.consult__form-link {
   color: var(--basic-oliva);
   text-decoration: none;
 }
-.how-to__form-link:hover {
+.how-to__form-link:hover,
+.consult__form-link:hover {
   text-decoration: underline;
 }
 
@@ -709,6 +722,137 @@ body {
 }
 .why__image-container img {
   display: block;
+}
+
+
+/* ---------------- CONSULT ---------------- */
+.consult {
+}
+.consult__container {
+  margin: 0px auto 160px;
+}
+.consult__title {
+  max-width: 615px;
+}
+.consult__content {
+  max-width: 951px;
+}
+.consult__description {
+  margin: 0px 0px 65px 0px;
+  max-width: 560px;
+}
+.consult__form {
+}
+.consult__form-name {
+}
+.consult__form-phone {
+}
+.consult__form-submit {
+}
+.consult__submite-button {
+}
+.consult__form-agreement {
+}
+.consult__form-link {
+}
+
+
+/* ---------------- TESTIMONIAL ---------------- */
+.testimonials {
+}
+.testimonials__container {
+  margin: 0px auto 160px;
+  display: flex;
+  flex-direction: column;
+}
+.testimonials__title {
+  margin: 0px 0px 40px 0px;
+}
+.testimonials__catalog {
+  margin: 0px 0px 40px 0px;
+}
+.testimonials__slide {
+}
+.swiper-slide {
+}
+.testimonials__item {
+  padding: 55px;
+  background-color: var(--basic-extra-white);
+}
+.testimonials__item-info {
+  display: flex;
+  margin: 0px 0px 30px 0px;
+}
+.testimonials__avatar {
+  width: 60px;
+  height: 60px;
+  margin: 0px 14px 0px 0px;
+}
+.testimonials__avatar img {
+  display: block;
+  border-radius: 50%;
+}
+.testimonials__bio {
+}
+.testimonials__name {
+  margin: 0px 0px 10px 0px;
+  font-family: "Raleway", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.15;
+}
+.testimonials__socials {
+}
+.testimonials__socials--instagram {
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='22' viewBox='0 0 21 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5 0.5C7.64885 0.5 7.29104 0.512115 6.17077 0.563C5.05292 0.613885 4.28965 0.791577 3.62169 1.05085C2.92119 1.31468 2.28667 1.72813 1.76238 2.26238C1.22803 2.78691 0.814572 3.42171 0.550846 4.1225C0.291577 4.78965 0.114692 5.55292 0.0630001 6.67077C0.0121154 7.79104 0 8.14885 0 11C0 13.8512 0.0121154 14.209 0.0630001 15.3292C0.113885 16.4471 0.291577 17.2103 0.550846 17.8775C0.819808 18.5681 1.17842 19.1537 1.76238 19.7376C2.28667 20.2719 2.92119 20.6853 3.62169 20.9492C4.28965 21.2076 5.05292 21.3853 6.17077 21.437C7.29104 21.4879 7.64885 21.5 10.5 21.5C13.3512 21.5 13.709 21.4879 14.8292 21.437C15.9471 21.3861 16.7103 21.2084 17.3775 20.9492C18.0783 20.6855 18.7131 20.272 19.2376 19.7376C19.772 19.2131 20.1854 18.5783 20.4492 17.8775C20.7076 17.2103 20.8853 16.4471 20.937 15.3292C20.9879 14.209 21 13.8512 21 11C21 8.14885 20.9879 7.79104 20.937 6.67077C20.8861 5.55292 20.7084 4.78965 20.4483 4.1225C20.1849 3.42179 19.7717 2.78699 19.2376 2.26238C18.7131 1.72801 18.0783 1.31455 17.3775 1.05085C16.7103 0.792385 15.9471 0.614692 14.8292 0.563C13.709 0.512115 13.3512 0.5 10.5 0.5ZM10.5 2.39162C13.3035 2.39162 13.6355 2.40292 14.7428 2.453C15.7662 2.49985 16.3227 2.67108 16.6926 2.81485C17.1828 3.00546 17.5326 3.23242 17.9001 3.59992C18.2676 3.96742 18.4945 4.31715 18.6852 4.80742C18.8289 5.17735 19.0002 5.73304 19.047 6.75719C19.0971 7.86373 19.1084 8.1965 19.1084 11C19.1084 13.8035 19.0971 14.1355 19.047 15.2428C19.0002 16.267 18.8289 16.8227 18.6852 17.1926C18.517 17.6487 18.2487 18.0613 17.9001 18.4001C17.5613 18.7487 17.1487 19.017 16.6926 19.1852C16.3227 19.3289 15.7662 19.5002 14.7428 19.547C13.6363 19.5971 13.3035 19.6084 10.5 19.6084C7.6965 19.6084 7.36373 19.5971 6.25719 19.547C5.23304 19.5002 4.67735 19.3289 4.30742 19.1852C3.85131 19.017 3.4387 18.7487 3.09992 18.4001C2.75135 18.0612 2.48309 17.6486 2.31485 17.1926C2.17108 16.8227 1.99985 16.267 1.953 15.2428C1.90292 14.1363 1.89162 13.8035 1.89162 11C1.89162 8.1965 1.90292 7.86454 1.953 6.75719C1.99985 5.73304 2.17108 5.17735 2.31485 4.80742C2.50546 4.31715 2.73242 3.96742 3.09992 3.59992C3.43872 3.2513 3.85132 2.98304 4.30742 2.81485C4.67735 2.67108 5.23304 2.49985 6.25719 2.453C7.36373 2.40292 7.6965 2.39162 10.5 2.39162Z' fill='%23D3BE73'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.5 5.3463C9.00051 5.3463 7.56244 5.94198 6.50213 7.00228C5.44183 8.06258 4.84616 9.50066 4.84616 11.0002C4.84616 12.4996 5.44183 13.9377 6.50213 14.998C7.56244 16.0583 9.00051 16.654 10.5 16.654C11.9995 16.654 13.4376 16.0583 14.4979 14.998C15.5582 13.9377 16.1539 12.4996 16.1539 11.0002C16.1539 9.50066 15.5582 8.06258 14.4979 7.00228C13.4376 5.94198 11.9995 5.3463 10.5 5.3463ZM10.5 14.6348C9.53605 14.6348 8.61157 14.2518 7.92995 13.5702C7.24832 12.8886 6.86539 11.9641 6.86539 11.0002C6.86539 10.0362 7.24832 9.11171 7.92995 8.43009C8.61157 7.74847 9.53605 7.36553 10.5 7.36553C11.464 7.36553 12.3884 7.74847 13.0701 8.43009C13.7517 9.11171 14.1346 10.0362 14.1346 11.0002C14.1346 11.9641 13.7517 12.8886 13.0701 13.5702C12.3884 14.2518 11.464 14.6348 10.5 14.6348ZM17.5269 5.42707C17.5269 5.59678 17.4935 5.76483 17.4286 5.92162C17.3636 6.07841 17.2684 6.22087 17.1484 6.34087C17.0284 6.46087 16.886 6.55607 16.7292 6.62101C16.5724 6.68595 16.4043 6.71938 16.2346 6.71938C16.0649 6.71938 15.8969 6.68595 15.7401 6.62101C15.5833 6.55607 15.4408 6.46087 15.3208 6.34087C15.2008 6.22087 15.1056 6.07841 15.0407 5.92162C14.9757 5.76483 14.9423 5.59678 14.9423 5.42707C14.9423 5.08433 15.0785 4.75563 15.3208 4.51327C15.5632 4.27092 15.8919 4.13477 16.2346 4.13477C16.5774 4.13477 16.9061 4.27092 17.1484 4.51327C17.3908 4.75563 17.5269 5.08433 17.5269 5.42707Z' fill='%23D3BE73'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.testimonials__link {
+  display: block;
+  line-height: 1.375;
+  color: var(--basic-oliva);
+  text-decoration: none;
+  padding: 0px 0px 0px 30px;
+}
+.testimonials__link:hover {
+  text-decoration: underline;
+}
+.testimonials__item-comment {
+  margin: 0px;
+}
+.testimonials__comment-link {
+  color: var(--basic-oliva);
+  text-decoration: none;
+}
+.testimonials__comment-link:hover {
+  text-decoration: underline;
+}
+.testimonials__socials--vkontakte {
+  background-image: url("data:image/svg+xml,%3Csvg width='21' height='14' viewBox='0 0 21 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M10.3061 12.9464H11.5794C11.5794 12.9464 11.9613 12.8828 12.1523 12.6918C12.3433 12.5008 12.3433 12.1188 12.3433 12.1188C12.3433 12.1188 12.3433 10.4636 13.1073 10.209C13.8712 9.95434 14.8898 11.8642 15.9084 12.5645C16.6723 13.1374 17.2453 13.0101 17.2453 13.0101L20.0464 12.9464C20.0464 12.9464 21.5106 12.8828 20.8103 11.6732C20.7467 11.6095 20.4284 10.8456 18.7095 9.25406C16.927 7.59885 17.1816 7.91716 19.2824 5.05238C20.5557 3.33351 21.065 2.31492 20.9377 1.80563C20.8103 1.36 19.8554 1.48732 19.8554 1.48732H16.6723C16.6723 1.48732 16.4177 1.42366 16.2903 1.55098C16.0994 1.67831 16.0357 1.86929 16.0357 1.86929C16.0357 1.86929 15.5264 3.20619 14.8898 4.3521C13.4892 6.70759 12.9163 6.83491 12.7253 6.70759C12.216 6.38928 12.3433 5.30703 12.3433 4.60675C12.3433 2.31492 12.7253 1.36 11.643 1.10535C11.3247 1.04169 11.0701 0.978027 10.1788 0.978027C9.0329 0.978027 8.07797 0.978027 7.56868 1.23267C7.18671 1.42366 6.93206 1.80563 7.12305 1.80563C7.31403 1.80563 7.82333 1.93295 8.07797 2.25126C8.33262 2.82422 8.33262 3.77915 8.33262 3.77915C8.33262 3.77915 8.5236 6.5166 7.88699 6.83491C7.44135 7.08956 6.8684 6.58026 5.59516 4.41576C4.95855 3.33351 4.44925 2.06028 4.44925 2.06028C4.44925 2.06028 4.38559 1.80563 4.1946 1.67831C4.00362 1.55098 3.68531 1.48732 3.68531 1.48732H0.693206C0.693206 1.48732 0.247574 1.48732 0.0565882 1.67831C-0.0707353 1.86929 0.0565882 2.1876 0.0565882 2.1876C0.0565882 2.1876 2.41207 7.66251 5.08587 10.4636C7.56868 13.1374 10.3061 12.9464 10.3061 12.9464Z' fill='%23D3BE73'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+.testimonials__controls {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+.testimonials__control {
+}
+.testimonials__control svg {
+  display: block;
+}
+.testimonials__control--prew {
+}
+.swiper-pagination {
+}
+.swiper-pagination-custom {
+}
+.testimonials__control--next {
 }
 
 
@@ -798,9 +942,22 @@ body {
     top: 0;
     left: 0;
     max-width: 100%;
+    margin: 0px 0px 30px 0px;
+  }
+  .why__image-container {
+    margin: 0px 0px 30px -15px;
+}
+  /* .why__description:last-child {
+    max-width: 100%;
+  } */
+  .why__content--mobile {
+    display: block;
+  }
+  .why__description {
+    margin: 0px 0px 15px 0px;
   }
   .why__description:last-child {
-    max-width: 100%;
+    display: none;
   }
 }
 
@@ -908,17 +1065,21 @@ body {
   .how-to__list-item {
     max-width: 100%;
   }
-  .how-to__form {
+  .how-to__form,
+  .consult__form {
     flex-direction: column;
     max-width: 324px;
   }
-  .how-to__form div {
+  .how-to__form div,
+  .consult__form div {
     width: 100%;
   }
-  .how-to__form input {
+  .how-to__form input,
+  .consult__form input {
     width: 100%;
   }
-  .how-to__form-phone {
+  .how-to__form-phone,
+  .consult__form-phone {
     margin: 0px 0px 25px;
   }
 }
@@ -969,7 +1130,7 @@ body {
     max-width: 87%;
   }
   .why__image-container {
-    margin: 0;
+    margin: 0px 0px 30px 0px;
     max-width: 100%;
   }
   .why__image-container img {
@@ -1054,7 +1215,10 @@ body {
   .promo__container,
   .advantages__container,
   .examples__container,
-  .how-to__container {
+  .how-to__container,
+  .why__container,
+  .consult__container,
+  .testimonials__container {
     margin: 0px auto 45px;
   }
   .title {
@@ -1124,36 +1288,53 @@ body {
   .how-to__description {
     line-height: 1.77;
   }
-  .how-to__form {
+  .how-to__form,
+  .consult__form {
     max-width: 100%;
   }
   .how-to__form-phone input,
-  .how-to__form-name input {
+  .how-to__form-name input,
+  .consult__form-phone input,
+  .consult__form-name input {
   padding: 19px 0px;
   }
-  .how-to__form-submit {
+  .how-to__form-submit,
+  .consult__form-submit {
     max-width: 100%;
   }
-  .how-to__form-agreement {
-    max-width: 60%;
+  .how-to__form-agreement,
+  .consult__form-agreement {
+    max-width: 71%;
   }
-  .why__container {
+  /* .why__container,
+  .consult__container {
     margin: 0px 0px 45px 0px;
-  }
+  } */
   .why__content {
     margin: 0px 0px 15px 0px;
-  }
-  .why__content--mobile {
-    display: block;
   }
   .why__description {
     margin: 0px 0px 15px 0px;
   }
-  .why__description:last-child {
-    display: none;
-  }
   .why__image-container {
     margin: 0px 0px 15px 0px;
+  }
+  .consult__description {
+    margin: 0px 0px 30px 0px;
+  }
+  .testimonials__catalog {
+    margin: 0px 0px 10px 0px;
+  }
+  .testimonials__item {
+    padding: 20px 15px;
+  }
+  .testimonials__item-info {
+    margin: 0px 0px 15px 0px;
+  }
+  .testimonials__name {
+    margin: 0px 0px 5px 0px;
+    font-size: 18px;
+    line-height: 1.16;
   }
 }
 
