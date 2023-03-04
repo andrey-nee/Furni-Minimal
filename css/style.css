@@ -137,6 +137,8 @@ body {
     border: 2px solid var(--basic-oliva);
     background-color: var(--basic-white);
     transition: all 0.3s;
+    white-space: nowrap;
+    cursor: pointer;
 }
 .button:hover {
     background-color: var(--basic-oliva);
@@ -546,7 +548,7 @@ body {
 }
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
   position: relative;
-  bottom: 2px;
+  bottom: 2px !important;
 }
 .examples__controls .swiper-pagination-bullet,
 .testimonials__controls .swiper-pagination-bullet {
@@ -637,8 +639,6 @@ body {
   column-gap: 40px;
   max-width: 944px;
   justify-content: space-between;
-}
-.how-to__form-name {
 }
 .how-to__form-phone input,
 .how-to__form-name input,
@@ -811,7 +811,8 @@ body {
 }
 .testimonials__link {
   display: block;
-  line-height: 1.375;
+  line-height: 1.8;
+  /* line-height: 1.375; */
   color: var(--basic-oliva);
   text-decoration: none;
   padding: 0px 0px 0px 30px;
@@ -1067,12 +1068,13 @@ body {
   }
   .how-to__form,
   .consult__form {
-    flex-direction: column;
-    max-width: 324px;
+    max-width: 100%;
+    column-gap: 25px;
+    flex-wrap: wrap;
   }
-  .how-to__form div,
-  .consult__form div {
-    width: 100%;
+  .how-to__form div:not(.how-to__form-submit),
+  .consult__form div:not(.consult__form-submit) {
+    width: 47%;
   }
   .how-to__form input,
   .consult__form input {
@@ -1125,45 +1127,13 @@ body {
   }
 }
 
-@media (max-width:700px) {
-  .promo__slider-container {
-    max-width: 87%;
-  }
-  .why__image-container {
-    margin: 0px 0px 30px 0px;
-    max-width: 100%;
-  }
-  .why__image-container img {
-    width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-width:559px) {
-  .promo__title {
-    font-size: 36px;
-  }
-  .promo__socials {
-    display: none;
-  }
-  .promo__slider-container {
-  max-width: 100%;
-  }
-  .examples__socials-link {
-    font-size: 12px;
-    line-height: 1.33;
-  }
-  .examples__socials::before {
-    top: 5px;
-  }
-  .examples__socials {
-    max-width: 40%;
-  }
-}
-
-@media (max-width:425px) {
+@media (max-width:760px) {
   .page-body {
     font-size: 13px;
+  }
+  .title {
+    font-size: 25px;
+    margin: 0px 0px 12px;
   }
   .subtitle {
     font-size: 17px;
@@ -1190,18 +1160,29 @@ body {
   .main-header__menu-burger {
     margin: 0;
   }
+  .button {
+    font-size: 14px;
+    padding: 22px 55px;
+  }
+
+  .promo__title {
+    font-size: 36px;
+  }
   h2.promo__title {
     font-size: 30px;
     margin: 0px 0px 12px;
+  }
+  .promo__socials {
+    display: none;
+  }
+  .promo__slider-container {
+    /* max-width: 87%; */
+    max-width: 100%;
   }
   .promo__description {
     font-size: 15px;
     line-height: 1.65;
     margin: 0px 0px 25px;
-  }
-  .button {
-    font-size: 14px;
-    padding: 22px 55px;
   }
   .promo__action {
     margin: 0px auto 0px 0px;
@@ -1221,10 +1202,7 @@ body {
   .testimonials__container {
     margin: 0px auto 45px;
   }
-  .title {
-    font-size: 25px;
-    margin: 0px 0px 12px;
-  }
+
   .advantages__item {
   }
   .advantages__description--main:not(:last-child) {
@@ -1243,6 +1221,7 @@ body {
     min-height: 45px;
     margin: 0px 0px 12px;
   }
+
   .examples__column-container {
     align-items: flex-start;
   }
@@ -1251,6 +1230,14 @@ body {
   }
   .examples__socials-link {
     max-width: 105px;
+    font-size: 12px;
+    line-height: 1.33;
+  }
+  .examples__socials::before {
+    top: 5px;
+  }
+  .examples__socials {
+    max-width: 40%;
   }
   .examples__catalog {
     margin: 0px 0px 18px;
@@ -1276,6 +1263,7 @@ body {
   .controls__control--right {
     margin: 0px 0px 0px 2px;
   }
+
   .how-to__list {
     margin: 0px 0px 15px;
   }
@@ -1306,10 +1294,7 @@ body {
   .consult__form-agreement {
     max-width: 71%;
   }
-  /* .why__container,
-  .consult__container {
-    margin: 0px 0px 45px 0px;
-  } */
+
   .why__content {
     margin: 0px 0px 15px 0px;
   }
@@ -1318,10 +1303,18 @@ body {
   }
   .why__image-container {
     margin: 0px 0px 15px 0px;
+    /* margin: 0px 0px 30px 0px; */
+    max-width: 100%;
   }
+  .why__image-container img {
+    width: 100%;
+    height: auto;
+  }
+
   .consult__description {
     margin: 0px 0px 30px 0px;
   }
+
   .testimonials__catalog {
     margin: 0px 0px 10px 0px;
   }
@@ -1335,6 +1328,17 @@ body {
     margin: 0px 0px 5px 0px;
     font-size: 18px;
     line-height: 1.16;
+  }
+}
+
+@media (max-width:480px) {
+  .how-to__form div:not(.how-to__form-submit),
+  .consult__form div:not(.consult__form-submit) {
+    width: 100%;
+  }
+  .how-to__submite-button,
+  .consult__submite-button {
+    width: 100%;
   }
 }
 
